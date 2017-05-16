@@ -8,6 +8,7 @@ We will assess your solution according to the following criteria
 
 * Functionality - Does it work as we expect?
 * Code structure - Have you structured the solution in a logical way?
+* Good practice - Do you follow good coding practice and use SDK's according to guidelines
 * Readability - Will we understand how your code works? 
 * Testing - Do you understand the importance of testing?
 
