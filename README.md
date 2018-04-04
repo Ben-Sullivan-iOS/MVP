@@ -2,13 +2,15 @@
 Hello, ios hacker! 
 
 We have prepared a challenge for you to complete in your own time.
-To get started use this repo as your origin.  Start hacking away at the problem and commit here.  Please commit and push often so we can follow your progress.
+To get started use this repo as your origin.  Start implementing the exercise and commit/push in a separate branch.
+Once done, please submit a pull request.
+Please try to use little/none external dependencies as possible (stay native as much as you can!)
 
 We will assess your solution according to the following criteria
 
-* Functionality - Does it work as we expect?
-* Code structure - Have you structured the solution in a logical way?
-* Good practice - Do you follow good coding practice and use SDK's according to guidelines
+* Functionality - Does it work as expected?
+* Code structure - Does your implementation provide a clean and efficient architecture?
+* Good practice - Do you follow good coding practice and use SDK's according to guidelines?
 * Readability - Will we understand how your code works? 
 * Testing - Do you understand the importance of testing?
 
