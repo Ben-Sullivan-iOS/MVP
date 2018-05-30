@@ -42,5 +42,11 @@ NB: The limited scope of this single view app will give you the opportunity to f
 NSDate *date = [NSDate dateWithTimeIntervalSince1970:start/1000.0];
 ```
 
+We believe that the test scope should be pretty clear at this point, but if you need any clarification please write me at:
+alessandro@crowdscores.com
+
+Have fun!
+Alessandro - iOS dev at CrowdScores
+
 
 
