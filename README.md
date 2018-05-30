@@ -10,7 +10,7 @@ Please use Swift
 We will assess your solution according to the following criteria
 
 * Functionality - Does it work as expected?
-* Code structure - Does your implementation provide a clean and efficient architecture?
+* Code structure - Does your implementation provide a clean, efficient and scalable architecture?
 * Good practice - Do you follow good coding practice and use SDK's according to guidelines?
 * Readability - Will we understand how your code works? 
 * Testing - Do you understand the importance of testing?
@@ -28,6 +28,8 @@ You will find a file called matches.json.   This contains a list of matches on o
 4. For each match simply show the kick off time and the teams
  * E.g. 15:00 Espanyol vs Barcelona
 5. Provide tests that you feel are appropriate 
+
+NB: The limited scope of this single view app will give you the opportunity to focus on presenting a scalable  and clean architecture. 
  
 ## Helpful things
 * Use your architecture of choice whilst still demonstrating proper separation of concerns
