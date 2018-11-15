@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		48D57818219E181800429D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D57817219E181800429D37 /* AppDelegate.swift */; };
-		48D5781A219E181800429D37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D57819219E181800429D37 /* ViewController.swift */; };
+		48D5781A219E181800429D37 /* CompetitionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D57819219E181800429D37 /* CompetitionsVC.swift */; };
 		48D5781D219E181800429D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D5781B219E181800429D37 /* Main.storyboard */; };
 		48D5781F219E181C00429D37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48D5781E219E181C00429D37 /* Assets.xcassets */; };
 		48D57822219E181C00429D37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D57820219E181C00429D37 /* LaunchScreen.storyboard */; };
 		48D5782D219E181D00429D37 /* CrowdScoreDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5782C219E181D00429D37 /* CrowdScoreDemoAppTests.swift */; };
+		48D57838219E191000429D37 /* matches.json in Resources */ = {isa = PBXBuildFile; fileRef = 48D57837219E191000429D37 /* matches.json */; };
+		48D5783A219E193300429D37 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D57839219E193300429D37 /* DataService.swift */; };
+		48D5783C219E196F00429D37 /* CompetitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5783B219E196F00429D37 /* CompetitionModel.swift */; };
+		48D5783E219E1A4F00429D37 /* CompetitionsVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5783D219E1A4F00429D37 /* CompetitionsVCPresenter.swift */; };
+		48D57840219E1AC400429D37 /* JSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5783F219E1AC400429D37 /* JSONService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +33,7 @@
 /* Begin PBXFileReference section */
 		48D57814219E181800429D37 /* CrowdScoreDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdScoreDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D57817219E181800429D37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48D57819219E181800429D37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48D57819219E181800429D37 /* CompetitionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsVC.swift; sourceTree = "<group>"; };
 		48D5781C219E181800429D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48D5781E219E181C00429D37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48D57821219E181C00429D37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +41,11 @@
 		48D57828219E181D00429D37 /* CrowdScoreDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrowdScoreDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D5782C219E181D00429D37 /* CrowdScoreDemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdScoreDemoAppTests.swift; sourceTree = "<group>"; };
 		48D5782E219E181D00429D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D57837219E191000429D37 /* matches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = matches.json; path = ../../matches.json; sourceTree = "<group>"; };
+		48D57839219E193300429D37 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		48D5783B219E196F00429D37 /* CompetitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionModel.swift; sourceTree = "<group>"; };
+		48D5783D219E1A4F00429D37 /* CompetitionsVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsVCPresenter.swift; sourceTree = "<group>"; };
+		48D5783F219E1AC400429D37 /* JSONService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +88,16 @@
 			isa = PBXGroup;
 			children = (
 				48D57817219E181800429D37 /* AppDelegate.swift */,
-				48D57819219E181800429D37 /* ViewController.swift */,
+				48D57819219E181800429D37 /* CompetitionsVC.swift */,
+				48D5783D219E1A4F00429D37 /* CompetitionsVCPresenter.swift */,
+				48D57839219E193300429D37 /* DataService.swift */,
+				48D5783F219E1AC400429D37 /* JSONService.swift */,
+				48D5783B219E196F00429D37 /* CompetitionModel.swift */,
 				48D5781B219E181800429D37 /* Main.storyboard */,
 				48D5781E219E181C00429D37 /* Assets.xcassets */,
 				48D57820219E181C00429D37 /* LaunchScreen.storyboard */,
 				48D57823219E181C00429D37 /* Info.plist */,
+				48D57837219E191000429D37 /* matches.json */,
 			);
 			path = CrowdScoreDemoApp;
 			sourceTree = "<group>";
@@ -178,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D57822219E181C00429D37 /* LaunchScreen.storyboard in Resources */,
+				48D57838219E191000429D37 /* matches.json in Resources */,
 				48D5781F219E181C00429D37 /* Assets.xcassets in Resources */,
 				48D5781D219E181800429D37 /* Main.storyboard in Resources */,
 			);
@@ -197,7 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48D5781A219E181800429D37 /* ViewController.swift in Sources */,
+				48D5783A219E193300429D37 /* DataService.swift in Sources */,
+				48D5783C219E196F00429D37 /* CompetitionModel.swift in Sources */,
+				48D5781A219E181800429D37 /* CompetitionsVC.swift in Sources */,
+				48D57840219E1AC400429D37 /* JSONService.swift in Sources */,
+				48D5783E219E1A4F00429D37 /* CompetitionsVCPresenter.swift in Sources */,
 				48D57818219E181800429D37 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
