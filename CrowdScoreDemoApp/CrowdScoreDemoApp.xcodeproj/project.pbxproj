@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		489D2387219E242900259A22 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D2386219E242900259A22 /* MatchCell.swift */; };
+		489D2389219E25AA00259A22 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D2388219E25AA00259A22 /* IntExtensions.swift */; };
 		48D57818219E181800429D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D57817219E181800429D37 /* AppDelegate.swift */; };
 		48D5781A219E181800429D37 /* CompetitionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D57819219E181800429D37 /* CompetitionsVC.swift */; };
 		48D5781D219E181800429D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D5781B219E181800429D37 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		489D2386219E242900259A22 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
+		489D2388219E25AA00259A22 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		48D57814219E181800429D37 /* CrowdScoreDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrowdScoreDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D57817219E181800429D37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48D57819219E181800429D37 /* CompetitionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsVC.swift; sourceTree = "<group>"; };
@@ -41,7 +45,7 @@
 		48D57828219E181D00429D37 /* CrowdScoreDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrowdScoreDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D5782C219E181D00429D37 /* CrowdScoreDemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrowdScoreDemoAppTests.swift; sourceTree = "<group>"; };
 		48D5782E219E181D00429D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48D57837219E191000429D37 /* matches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = matches.json; path = ../../matches.json; sourceTree = "<group>"; };
+		48D57837219E191000429D37 /* matches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = matches.json; sourceTree = "<group>"; };
 		48D57839219E193300429D37 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		48D5783B219E196F00429D37 /* CompetitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionModel.swift; sourceTree = "<group>"; };
 		48D5783D219E1A4F00429D37 /* CompetitionsVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsVCPresenter.swift; sourceTree = "<group>"; };
@@ -66,6 +70,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		489D238A219E299600259A22 /* CompetitionModule */ = {
+			isa = PBXGroup;
+			children = (
+				48D57819219E181800429D37 /* CompetitionsVC.swift */,
+				48D5783D219E1A4F00429D37 /* CompetitionsVCPresenter.swift */,
+				489D2386219E242900259A22 /* MatchCell.swift */,
+			);
+			path = CompetitionModule;
+			sourceTree = "<group>";
+		};
+		489D238B219E29B700259A22 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				48D57839219E193300429D37 /* DataService.swift */,
+				48D5783F219E1AC400429D37 /* JSONService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		489D238C219E29CF00259A22 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				48D5781E219E181C00429D37 /* Assets.xcassets */,
+				48D57837219E191000429D37 /* matches.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		489D238D219E29F500259A22 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48D5783B219E196F00429D37 /* CompetitionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		489D238E219E2A0100259A22 /* HelperExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				489D2388219E25AA00259A22 /* IntExtensions.swift */,
+			);
+			path = HelperExtensions;
+			sourceTree = "<group>";
+		};
 		48D5780B219E181800429D37 = {
 			isa = PBXGroup;
 			children = (
@@ -88,16 +136,14 @@
 			isa = PBXGroup;
 			children = (
 				48D57817219E181800429D37 /* AppDelegate.swift */,
-				48D57819219E181800429D37 /* CompetitionsVC.swift */,
-				48D5783D219E1A4F00429D37 /* CompetitionsVCPresenter.swift */,
-				48D57839219E193300429D37 /* DataService.swift */,
-				48D5783F219E1AC400429D37 /* JSONService.swift */,
-				48D5783B219E196F00429D37 /* CompetitionModel.swift */,
 				48D5781B219E181800429D37 /* Main.storyboard */,
-				48D5781E219E181C00429D37 /* Assets.xcassets */,
-				48D57820219E181C00429D37 /* LaunchScreen.storyboard */,
+				489D238A219E299600259A22 /* CompetitionModule */,
+				489D238B219E29B700259A22 /* Services */,
+				489D238D219E29F500259A22 /* Model */,
+				489D238E219E2A0100259A22 /* HelperExtensions */,
 				48D57823219E181C00429D37 /* Info.plist */,
-				48D57837219E191000429D37 /* matches.json */,
+				48D57820219E181C00429D37 /* LaunchScreen.storyboard */,
+				489D238C219E29CF00259A22 /* Resources */,
 			);
 			path = CrowdScoreDemoApp;
 			sourceTree = "<group>";
@@ -214,9 +260,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D5783A219E193300429D37 /* DataService.swift in Sources */,
+				489D2389219E25AA00259A22 /* IntExtensions.swift in Sources */,
 				48D5783C219E196F00429D37 /* CompetitionModel.swift in Sources */,
 				48D5781A219E181800429D37 /* CompetitionsVC.swift in Sources */,
 				48D57840219E1AC400429D37 /* JSONService.swift in Sources */,
+				489D2387219E242900259A22 /* MatchCell.swift in Sources */,
 				48D5783E219E1A4F00429D37 /* CompetitionsVCPresenter.swift in Sources */,
 				48D57818219E181800429D37 /* AppDelegate.swift in Sources */,
 			);

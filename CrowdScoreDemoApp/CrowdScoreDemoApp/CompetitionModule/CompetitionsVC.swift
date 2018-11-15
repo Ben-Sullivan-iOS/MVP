@@ -16,13 +16,12 @@ class CompetitionsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var presenter = CompetitionsVCPresenter()
-    var competitions: [Competition] = []
+    private var presenter: CompetitionsVCPresenter?
+    private var competitions: [Competition] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter.delegate = self
+        presenter = CompetitionsVCPresenter(delegate: self)
     }
 
 }
@@ -31,6 +30,7 @@ extension CompetitionsVC: CompetitionsVCDelegate {
     
     func modelDataUpdated(competitions: [Competition]) {
         self.competitions = competitions
+        tableView.reloadData()
     }
     
 }
@@ -42,13 +42,23 @@ extension CompetitionsVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return competitions[section].matches?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath)
-        cell.textLabel?.text = "test"
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchCell
+        
+        if let match = competitions[indexPath.section].matches?[indexPath.row] {
+            cell.configure(withMatch: match)
+        }
+        
         return cell
+    }
+}
+
+extension CompetitionsVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return competitions[section].name
     }
 }

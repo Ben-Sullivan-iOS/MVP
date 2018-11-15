@@ -19,8 +19,12 @@ struct CompetitionsVCPresenter {
         }
     }
     
-    init() {
-        
+    init(delegate: CompetitionsVCDelegate) {
+        self.delegate = delegate
+        updateCompetitions()
+    }
+    
+    private mutating func updateCompetitions() {
         guard let matchesResultModel = JSONService().getJSONData() else { return }
         
         competitions = DataService().createCompetitions(matchModels: matchesResultModel)
