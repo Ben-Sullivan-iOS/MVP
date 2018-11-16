@@ -13,6 +13,7 @@ class JSONServiceTests: XCTestCase {
 
     var validJSONPath: String?
     var jsonService: JSONService?
+    let invalidPath = "invalidFilePath"
     
     override func setUp() {
         guard let matchesPath = Bundle.main.path(forResource:"mockJSON", ofType: "json") else { return }
@@ -22,13 +23,14 @@ class JSONServiceTests: XCTestCase {
         jsonService = JSONService()
     }
     
-    func testCorrectModel() {
+    func testCorrectJSONPath() {
         guard let validJSONPath = validJSONPath else { return }
         let result = jsonService?.getJSONData(filePath: validJSONPath)
-        
         XCTAssert(result?.count == 2)
-        XCTAssert(result?.count != 2)
-
-        
+    }
+    
+    func testInvalidJSONPath() {
+        let result = jsonService?.getJSONData(filePath: invalidPath)
+        XCTAssertNil(result)
     }
 }

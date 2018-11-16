@@ -11,8 +11,8 @@ import Foundation
 struct JSONService {
     
     func getJSONData(filePath: String) -> [MatchesResultModel]? {
-        let contentData = FileManager.default.contents(atPath: filePath)
-        let jsonString = String(data:contentData!, encoding:String.Encoding.utf8)
+        guard let contentData = FileManager.default.contents(atPath: filePath) else { return nil }
+        let jsonString = String(data:contentData, encoding:String.Encoding.utf8)
         let jsonData = jsonString?.data(using: .utf8)
         
         return decodeToModel(JSONData: jsonData)

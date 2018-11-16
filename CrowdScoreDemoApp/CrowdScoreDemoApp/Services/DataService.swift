@@ -10,6 +10,7 @@ import Foundation
 
 struct DataService {
     
+    //  Converts a model representing the JSON into a model more consumable by the VC
     func createCompetitions(matchModels: [MatchesResultModel]) -> [Competition] {
         var competitions = [Competition]()
         
@@ -36,7 +37,6 @@ struct DataService {
                 let competition = Competition(ordering: match.competition.ordering, matches: [newMatch], name: match.competition.name)
                 competitions.append(competition)
             }
-            
         }
         
         return competitions

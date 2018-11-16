@@ -1,0 +1,128 @@
+[
+  {
+    "competition": {
+      "ordering": 11000,
+      "dbid": 74,
+      "name": "A-League",
+      "flagUrl": "https://static.crowdscores.com/flags/australia.png"
+    },
+    "nextState": null,
+    "currentStateStart": 1451722247000,
+    "dbid": 30298,
+    "aggregateScore": null,
+    "awayGoals": 1,
+    "start": 1451715300000,
+    "homeGoals": 2,
+    "linesOfText": [],
+    "extraTimeHasHappened": false,
+    "season": {
+      "dbid": 10,
+      "end": 1467241199000,
+      "name": "2015/2016",
+      "start": 1435705200000
+    },
+    "homeTeam": {
+      "shirtUrl": "https://static.crowdscores.com/kits/default.svg",
+      "name": "Brisbane Roar",
+      "dbid": 997,
+      "flagUrl": "https://static.crowdscores.com/flags/default.png",
+      "isNational": false,
+      "badgeUrl": "https://static.crowdscores.com/badges/default.svg",
+      "shortName": "Brisbane",
+      "shortCode": "BRI"
+    },
+    "dismissals": {
+      "home": 0,
+      "away": 0
+    },
+    "penaltyShootout": {},
+    "isResult": true,
+    "goToExtraTime": false,
+    "venue": null,
+    "limitedCoverage": false,
+    "awayTeam": {
+      "shirtUrl": "https://static.crowdscores.com/kits/default.svg",
+      "name": "Perth Glory",
+      "dbid": 846,
+      "flagUrl": "https://static.crowdscores.com/flags/default.png",
+      "isNational": false,
+      "badgeUrl": "https://static.crowdscores.com/badges/default.svg",
+      "shortName": "Glory",
+      "shortCode": "PRG"
+    },
+    "outcome": {
+      "winner": "home",
+      "type": "simple",
+      "afterExtraTime": false
+    },
+    "round": {
+      "dbid": 491,
+      "hasLeagueTable": true,
+      "name": "A-League"
+    },
+    "currentState": 9
+  },
+  {
+    "competition": {
+      "ordering": 26800,
+      "dbid": 250,
+      "name": "W-League",
+      "flagUrl": "https://static.crowdscores.com/flags/australia.png"
+    },
+    "nextState": null,
+    "currentStateStart": 1451728543000,
+    "dbid": 45178,
+    "aggregateScore": null,
+    "awayGoals": 2,
+    "start": 1451721600000,
+    "homeGoals": 0,
+    "linesOfText": [],
+    "extraTimeHasHappened": false,
+    "season": {
+      "dbid": 10,
+      "end": 1467241199000,
+      "name": "2015/2016",
+      "start": 1435705200000
+    },
+    "homeTeam": {
+      "shirtUrl": "https://static.crowdscores.com/kits/default.svg",
+      "name": "Perth Glory Women (W)",
+      "dbid": 3159,
+      "flagUrl": "https://static.crowdscores.com/flags/default.png",
+      "isNational": false,
+      "badgeUrl": "https://static.crowdscores.com/badges/default.svg",
+      "shortName": "Glory (W)",
+      "shortCode": "PGW"
+    },
+    "dismissals": {
+      "home": 0,
+      "away": 0
+    },
+    "penaltyShootout": {},
+    "isResult": true,
+    "goToExtraTime": false,
+    "venue": null,
+    "limitedCoverage": false,
+    "awayTeam": {
+      "shirtUrl": "https://static.crowdscores.com/kits/default.svg",
+      "name": "Canberra United (W)",
+      "dbid": 3155,
+      "flagUrl": "https://static.crowdscores.com/flags/default.png",
+      "isNational": false,
+      "badgeUrl": "https://static.crowdscores.com/badges/default.svg",
+      "shortName": "Canberra Utd (W)",
+      "shortCode": "CAN"
+    },
+    "outcome": {
+      "winner": "away",
+      "type": "simple",
+      "afterExtraTime": false
+    },
+    "round": {
+      "dbid": 625,
+      "hasLeagueTable": true,
+      "name": "W-League"
+    },
+    "currentState": 9
+  }
+]

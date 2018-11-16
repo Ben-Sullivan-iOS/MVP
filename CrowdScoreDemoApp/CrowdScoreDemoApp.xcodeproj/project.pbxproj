@@ -12,6 +12,7 @@
 		489D2390219EB2D200259A22 /* CellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D238F219EB2D200259A22 /* CellExtensions.swift */; };
 		489D2392219EC8EF00259A22 /* JSONServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D2391219EC8EF00259A22 /* JSONServiceTests.swift */; };
 		489D2396219ECC2B00259A22 /* mockJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 489D2395219ECC2B00259A22 /* mockJSON.json */; };
+		489D2397219ECDFD00259A22 /* mockJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 489D2395219ECC2B00259A22 /* mockJSON.json */; };
 		48D57818219E181800429D37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D57817219E181800429D37 /* AppDelegate.swift */; };
 		48D5781A219E181800429D37 /* CompetitionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D57819219E181800429D37 /* CompetitionsVC.swift */; };
 		48D5781D219E181800429D37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D5781B219E181800429D37 /* Main.storyboard */; };
@@ -247,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489D2397219ECDFD00259A22 /* mockJSON.json in Resources */,
 				48D57822219E181C00429D37 /* LaunchScreen.storyboard in Resources */,
 				48D57838219E191000429D37 /* matches.json in Resources */,
 				48D5781F219E181C00429D37 /* Assets.xcassets in Resources */,
