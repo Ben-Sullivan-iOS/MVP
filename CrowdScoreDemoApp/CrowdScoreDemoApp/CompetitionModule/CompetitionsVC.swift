@@ -16,7 +16,7 @@ class CompetitionsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var presenter: CompetitionsVCPresenter?
+    private var presenter: CompetitionsVCPresenterType?
     private var competitions: [Competition] = []
     
     override func viewDidLoad() {
@@ -47,7 +47,7 @@ extension CompetitionsVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: MatchCell.identifier, for: indexPath) as! MatchCell
         
         if let match = competitions[indexPath.section].matches?[indexPath.row] {
             cell.configure(withMatch: match)

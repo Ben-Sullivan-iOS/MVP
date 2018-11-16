@@ -19,7 +19,7 @@ struct DataService {
             let newMatch = Match(
                 homeTeam: Team(shortName: match.homeTeam.shortName),
                 awayTeam: Team(shortName: match.awayTeam.shortName),
-                kickOffTime: match.kickOffTime)
+                kickOffTime: match.kickOffTime.asTimeString())
             
             if competitions.isEmpty {
                 let competition = Competition(ordering: match.competition.ordering, matches: [newMatch], name: match.competition.name)

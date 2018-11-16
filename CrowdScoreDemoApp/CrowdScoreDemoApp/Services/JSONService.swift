@@ -10,8 +10,7 @@ import Foundation
 
 struct JSONService {
     
-    func getJSONData() -> [MatchesResultModel]? {
-        guard let filePath = Bundle.main.path(forResource:"matches", ofType: "json") else { return nil }
+    func getJSONData(filePath: String) -> [MatchesResultModel]? {
         let contentData = FileManager.default.contents(atPath: filePath)
         let jsonString = String(data:contentData!, encoding:String.Encoding.utf8)
         let jsonData = jsonString?.data(using: .utf8)

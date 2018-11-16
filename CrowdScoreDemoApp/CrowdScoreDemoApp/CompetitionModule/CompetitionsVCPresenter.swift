@@ -8,11 +8,16 @@
 
 import Foundation
 
-struct CompetitionsVCPresenter {
+//  Any functionality which needs to be exposed to be added here
+protocol CompetitionsVCPresenterType {
+}
+
+//  Single responsibility of handling data to be provided to a VC
+struct CompetitionsVCPresenter: CompetitionsVCPresenterType {
     
-    weak var delegate: CompetitionsVCDelegate?
+    private weak var delegate: CompetitionsVCDelegate?
     
-    var competitions: [Competition]? {
+    private var competitions: [Competition]? {
         didSet {
             guard let competitions = self.competitions else { return }
             delegate?.modelDataUpdated(competitions: competitions)
@@ -25,7 +30,13 @@ struct CompetitionsVCPresenter {
     }
     
     private mutating func updateCompetitions() {
-        guard let matchesResultModel = JSONService().getJSONData() else { return }
+        
+        guard
+            let matchesPath = Bundle.main.path(forResource:"matches", ofType: "json"),
+            let matchesResultModel = JSONService().getJSONData(filePath: matchesPath)
+            else {
+                return
+        }
         
         competitions = DataService().createCompetitions(matchModels: matchesResultModel)
     }

@@ -36,7 +36,7 @@ struct Competition: Codable {
 struct Match {
     let homeTeam: Team
     let awayTeam: Team
-    let kickOffTime: Int
+    let kickOffTime: String
 }
 
 struct Team: Codable {
