@@ -28,5 +28,4 @@ struct JSONService {
         }
     }
     
-
 }

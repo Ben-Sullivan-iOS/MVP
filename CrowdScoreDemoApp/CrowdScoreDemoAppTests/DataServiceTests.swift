@@ -12,11 +12,11 @@ import XCTest
 class DataServiceTests: XCTestCase {
     
     var validModel: [MatchesResultModel]?
+    var invalidModel = [MatchesResultModel]()
     var dataService: DataService?
 
     override func setUp() {
         guard let matchesPath = Bundle.main.path(forResource:"matches", ofType: "json") else { return }
-        
         validModel = JSONService().getJSONData(filePath: matchesPath)
         dataService = DataService()
     }
