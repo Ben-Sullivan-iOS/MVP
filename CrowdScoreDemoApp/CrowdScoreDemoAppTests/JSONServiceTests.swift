@@ -33,4 +33,11 @@ class JSONServiceTests: XCTestCase {
         let result = jsonService?.getJSONData(filePath: invalidPath)
         XCTAssertNil(result)
     }
+    
+    func testPerformanceExampleWithLiveData() {
+        guard let matchesPath = Bundle.main.path(forResource:"matches", ofType: "json") else { return }
+        self.measure {
+            let _ = jsonService?.getJSONData(filePath: matchesPath)
+        }
+    }
 }
