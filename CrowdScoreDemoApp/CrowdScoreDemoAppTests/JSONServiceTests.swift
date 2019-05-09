@@ -34,10 +34,35 @@ class JSONServiceTests: XCTestCase {
         XCTAssertNil(result)
     }
     
-    func testPerformanceExampleWithLiveData() {
-        guard let matchesPath = Bundle.main.path(forResource:"matches", ofType: "json") else { return }
+    var arr = [Int]()
+    
+    func setArray() {
+        for i in 0...100000 {
+            arr.append(i)
+        }
+    }
+    
+    func testMapPerformance() {
+        setArray()
+        var arr2 = [Int]()
+        
         self.measure {
-            let _ = jsonService?.getJSONData(filePath: matchesPath)
+            let _ = arr.map({ i -> Void in
+                let sum = 50 * i
+                arr2.append(sum)
+            })
+        }
+    }
+    
+    func testForEachPerformance() {
+        setArray()
+        var arr2 = [Int]()
+        
+        self.measure {
+            arr.forEach({ i in
+                let sum = 50 * i
+                arr2.append(sum)
+            })
         }
     }
 }

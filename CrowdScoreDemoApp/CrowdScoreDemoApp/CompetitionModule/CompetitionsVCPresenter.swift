@@ -10,34 +10,34 @@ import Foundation
 
 //  Any functionality which needs to be exposed to be added here
 protocol CompetitionsVCPresenterType {
+  mutating func onViewDidLoad(view: CompetitionsVCDelegate)
 }
 
 //  Single responsibility of handling data to be provided to a VC
 struct CompetitionsVCPresenter: CompetitionsVCPresenterType {
-    
-    private weak var delegate: CompetitionsVCDelegate?
-    
-    private var competitions: [Competition]? {
-        didSet {
-            guard let competitions = self.competitions else { return }
-            delegate?.modelDataUpdated(competitions: competitions)
-        }
+  
+  private let dataService: DataService
+  private let jsonService: JSONService
+  private var view: CompetitionsVCDelegate?
+  
+  mutating func onViewDidLoad(view: CompetitionsVCDelegate) {
+    self.view = view
+    updateCompetitions()
+  }
+  
+  init(dataService: DataService, jsonService: JSONService) {
+    self.dataService = dataService
+    self.jsonService = jsonService
+  }
+  
+  private mutating func updateCompetitions() {
+    guard
+      let matchesPath = Bundle.main.path(forResource:"matches", ofType: "json"),
+      let matchesResultModel = jsonService.getJSONData(filePath: matchesPath)
+      else {
+        return
     }
     
-    init(delegate: CompetitionsVCDelegate) {
-        self.delegate = delegate
-        updateCompetitions()
-    }
-    
-    private mutating func updateCompetitions() {
-        
-        guard
-            let matchesPath = Bundle.main.path(forResource:"matches", ofType: "json"),
-            let matchesResultModel = JSONService().getJSONData(filePath: matchesPath)
-            else {
-                return
-        }
-        
-        competitions = DataService().createCompetitions(matchModels: matchesResultModel)
-    }
+    view?.competitions = dataService.createCompetitions(matchModels: matchesResultModel)
+  }
 }

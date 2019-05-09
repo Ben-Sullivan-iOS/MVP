@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		485964A822844A0100FBDAA2 /* MatchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 485964A722844A0100FBDAA2 /* MatchCell.xib */; };
+		485964AB2284521600FBDAA2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485964AA2284521600FBDAA2 /* MainCoordinator.swift */; };
+		489B668D2284310200C65B55 /* CompetitionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489B668C2284310200C65B55 /* CompetitionsView.xib */; };
 		489D2387219E242900259A22 /* MatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D2386219E242900259A22 /* MatchCell.swift */; };
 		489D2389219E25AA00259A22 /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D2388219E25AA00259A22 /* IntExtensions.swift */; };
 		489D2390219EB2D200259A22 /* CellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489D238F219EB2D200259A22 /* CellExtensions.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		485964A722844A0100FBDAA2 /* MatchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchCell.xib; sourceTree = "<group>"; };
+		485964AA2284521600FBDAA2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		489B668C2284310200C65B55 /* CompetitionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompetitionsView.xib; sourceTree = "<group>"; };
 		489D2386219E242900259A22 /* MatchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCell.swift; sourceTree = "<group>"; };
 		489D2388219E25AA00259A22 /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		489D238F219EB2D200259A22 /* CellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellExtensions.swift; sourceTree = "<group>"; };
@@ -77,10 +83,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		485964A92284520600FBDAA2 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				485964AA2284521600FBDAA2 /* MainCoordinator.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		489D238A219E299600259A22 /* CompetitionModule */ = {
 			isa = PBXGroup;
 			children = (
 				48D57819219E181800429D37 /* CompetitionsVC.swift */,
+				489B668C2284310200C65B55 /* CompetitionsView.xib */,
+				485964A722844A0100FBDAA2 /* MatchCell.xib */,
 				48D5783D219E1A4F00429D37 /* CompetitionsVCPresenter.swift */,
 				489D2386219E242900259A22 /* MatchCell.swift */,
 			);
@@ -150,6 +166,7 @@
 				489D238B219E29B700259A22 /* Services */,
 				489D238D219E29F500259A22 /* Model */,
 				489D238E219E2A0100259A22 /* HelperExtensions */,
+				485964A92284520600FBDAA2 /* Navigation */,
 				48D57823219E181C00429D37 /* Info.plist */,
 				48D57820219E181C00429D37 /* LaunchScreen.storyboard */,
 				489D238C219E29CF00259A22 /* Resources */,
@@ -217,9 +234,11 @@
 				TargetAttributes = {
 					48D57813219E181800429D37 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 					48D57827219E181D00429D37 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 						TestTargetID = 48D57813219E181800429D37;
 					};
 				};
@@ -252,7 +271,9 @@
 				48D57822219E181C00429D37 /* LaunchScreen.storyboard in Resources */,
 				48D57838219E191000429D37 /* matches.json in Resources */,
 				48D5781F219E181C00429D37 /* Assets.xcassets in Resources */,
+				489B668D2284310200C65B55 /* CompetitionsView.xib in Resources */,
 				48D5781D219E181800429D37 /* Main.storyboard in Resources */,
+				485964A822844A0100FBDAA2 /* MatchCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +295,7 @@
 				48D5783A219E193300429D37 /* DataService.swift in Sources */,
 				489D2390219EB2D200259A22 /* CellExtensions.swift in Sources */,
 				489D2389219E25AA00259A22 /* IntExtensions.swift in Sources */,
+				485964AB2284521600FBDAA2 /* MainCoordinator.swift in Sources */,
 				48D5783C219E196F00429D37 /* CompetitionModel.swift in Sources */,
 				48D5781A219E181800429D37 /* CompetitionsVC.swift in Sources */,
 				48D57840219E1AC400429D37 /* JSONService.swift in Sources */,
@@ -444,14 +466,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KVYSWMVXX;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = CrowdScoreDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BenSullivan.CrowdScoreDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -463,13 +488,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2KVYSWMVXX;
 				INFOPLIST_FILE = CrowdScoreDemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BenSullivan.CrowdScoreDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -489,7 +515,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BenSullivan.CrowdScoreDemoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrowdScoreDemoApp.app/CrowdScoreDemoApp";
 			};
@@ -510,7 +536,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = BenSullivan.CrowdScoreDemoAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrowdScoreDemoApp.app/CrowdScoreDemoApp";
 			};
