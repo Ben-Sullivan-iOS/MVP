@@ -288,7 +288,7 @@
       "flagUrl": "https://static.crowdscores.com/flags/default.png",
       "isNational": false,
       "badgeUrl": "https://static.crowdscores.com/badges/default.svg",
-      "shortName": "West Ham",
+      "shortName": "West Ham United Long Name",
       "shortCode": "WHU"
     },
     "dismissals": {
@@ -315,7 +315,7 @@
       "flagUrl": "https://static.crowdscores.com/flags/default.png",
       "isNational": false,
       "badgeUrl": "https://static.crowdscores.com/badges/default.svg",
-      "shortName": "Liverpool",
+      "shortName": "Liverpool United Long Name",
       "shortCode": "LIV"
     },
     "outcome": {

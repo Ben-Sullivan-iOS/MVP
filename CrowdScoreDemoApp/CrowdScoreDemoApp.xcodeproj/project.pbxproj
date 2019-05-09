@@ -23,7 +23,6 @@
 		48D57822219E181C00429D37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D57820219E181C00429D37 /* LaunchScreen.storyboard */; };
 		48D5782D219E181D00429D37 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5782C219E181D00429D37 /* DataServiceTests.swift */; };
 		48D57838219E191000429D37 /* matches.json in Resources */ = {isa = PBXBuildFile; fileRef = 48D57837219E191000429D37 /* matches.json */; };
-		48D5783A219E193300429D37 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D57839219E193300429D37 /* DataService.swift */; };
 		48D5783C219E196F00429D37 /* CompetitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5783B219E196F00429D37 /* CompetitionModel.swift */; };
 		48D5783E219E1A4F00429D37 /* CompetitionsVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5783D219E1A4F00429D37 /* CompetitionsVCPresenter.swift */; };
 		48D57840219E1AC400429D37 /* JSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5783F219E1AC400429D37 /* JSONService.swift */; };
@@ -59,7 +58,6 @@
 		48D5782C219E181D00429D37 /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
 		48D5782E219E181D00429D37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D57837219E191000429D37 /* matches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = matches.json; sourceTree = "<group>"; };
-		48D57839219E193300429D37 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		48D5783B219E196F00429D37 /* CompetitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionModel.swift; sourceTree = "<group>"; };
 		48D5783D219E1A4F00429D37 /* CompetitionsVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsVCPresenter.swift; sourceTree = "<group>"; };
 		48D5783F219E1AC400429D37 /* JSONService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONService.swift; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 		489D238B219E29B700259A22 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				48D57839219E193300429D37 /* DataService.swift */,
 				48D5783F219E1AC400429D37 /* JSONService.swift */,
 			);
 			path = Services;
@@ -292,7 +289,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48D5783A219E193300429D37 /* DataService.swift in Sources */,
 				489D2390219EB2D200259A22 /* CellExtensions.swift in Sources */,
 				489D2389219E25AA00259A22 /* IntExtensions.swift in Sources */,
 				485964AB2284521600FBDAA2 /* MainCoordinator.swift in Sources */,

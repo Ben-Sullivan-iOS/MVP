@@ -6,21 +6,17 @@
 //  Copyright © 2019 Ben Sullivan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct MainCoordinator {
   
-  static let dataService = DataService()
-  static let jsonService = JSONService()
+  private let dataService = DataService()
   
   func start(window: UIWindow?) {
     
-    let presenter = CompetitionsVCPresenter(
-      dataService: MainCoordinator.dataService,
-      jsonService: MainCoordinator.jsonService)
+    let presenter = CompetitionsVCPresenter(dataService: dataService)
     
     let vc = CompetitionsVC(presenter: presenter)
-    vc.title = "Competitions"
     let navigationController = UINavigationController()
     navigationController.setViewControllers([vc], animated: true)
     

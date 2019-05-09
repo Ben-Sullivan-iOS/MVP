@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct JSONService {
+struct DataService {
     
     func getJSONData(filePath: String) -> [MatchesResultModel]? {
         guard let contentData = FileManager.default.contents(atPath: filePath) else { return nil }

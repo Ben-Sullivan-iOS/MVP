@@ -9,16 +9,16 @@
 import UIKit
 
 protocol CompetitionsVCDelegate: class {
-  var competitions: [Competition] { get set }
+  var competitions: [CompetitionRepresentable] { get set }
 }
 
 class CompetitionsVC: UIViewController, CompetitionsVCDelegate {
   
   @IBOutlet weak var tableView: UITableView!
   
-  var presenter: CompetitionsVCPresenterType?
+  private var presenter: CompetitionsVCPresenterType?
   
-  var competitions: [Competition] = [] {
+  var competitions: [CompetitionRepresentable] = [] {
     didSet {
       tableView.reloadData()
     }
@@ -35,11 +35,12 @@ class CompetitionsVC: UIViewController, CompetitionsVCDelegate {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    title = "Competitions"
     configureTableView()
     presenter?.onViewDidLoad(view: self)
   }
   
-  func configureTableView() {
+  private func configureTableView() {
     tableView.dataSource = self
     tableView.delegate = self
     tableView.register(UINib(nibName: "MatchCell", bundle: nil), forCellReuseIdentifier: MatchCell.identifier)
