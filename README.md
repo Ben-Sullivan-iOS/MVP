@@ -1,3 +1,5 @@
+Original take home project spec:
+
 # ios-exercises
 Hello, ios dev! 
 
@@ -36,11 +38,4 @@ You will find a file called matches.json.   This contains a list of matches on o
 * Use homeTeam.shortName and awayTeam.shortName for the team names 
 * The kick off time of the match is defined by the attribute 'start' ( this is an epoch)
 
-We believe that the test scope should be pretty clear at this point, but if you need any clarification please write me at:
-jacob@crowdscores.com
-
 Have fun!
-Jacob - iOS dev at CrowdScores
-
-
-
